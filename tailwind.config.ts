@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'serif': ['Crimson Text', 'Georgia', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
         'mono': ['JetBrains Mono', 'Courier New', 'monospace'],
       },
       typography: {

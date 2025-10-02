@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,58 +9,84 @@
   }
   
   body {
-    @apply bg-white text-black;
+    @apply bg-gray-50 text-gray-900;
     background-image: 
-      repeating-linear-gradient(
-        transparent,
-        transparent 19px,
-        #e0e0e0 19px,
-        #e0e0e0 20px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 19px,
-        #e0e0e0 19px,
-        #e0e0e0 20px
-      );
-    background-size: 20px 20px;
+      radial-gradient(circle at 20% 30%, #22c55e 0%, transparent 1%),
+      radial-gradient(circle at 80% 70%, #22c55e 0%, transparent 1%),
+      radial-gradient(circle at 40% 80%, #22c55e 0%, transparent 1%),
+      radial-gradient(circle at 90% 10%, #22c55e 0%, transparent 1%),
+      radial-gradient(circle at 15% 90%, #22c55e 0%, transparent 1%);
+    background-size: 200px 200px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 150px 30px;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(90deg, transparent 0%, transparent 48%, #22c55e 49%, #22c55e 49.5%, transparent 50.5%, transparent 100%),
+      linear-gradient(180deg, transparent 0%, transparent 48%, #22c55e 49%, #22c55e 49.5%, transparent 50.5%, transparent 100%);
+    background-size: 100px 100px, 100px 100px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
   }
   
   @media print {
     body {
-      background: white;
+      @apply bg-white;
+      background-image: none;
+    }
+    body::before {
+      display: none;
     }
   }
 }
 
 @layer components {
-  .container-paper {
-    @apply max-w-4xl mx-auto bg-white shadow-lg;
+  .container-modern {
+    @apply max-w-7xl mx-auto;
   }
   
   .section-title {
-    @apply text-2xl font-bold uppercase tracking-wide border-b-2 border-black pb-2 mb-6;
+    @apply text-3xl font-bold text-gray-900 mb-6;
   }
   
   .subsection-title {
-    @apply text-xl font-semibold border-l-4 border-black pl-4 my-4;
+    @apply text-xl font-semibold text-gray-800 border-l-4 border-green-600 pl-4 my-4;
   }
   
   .formula-box {
-    @apply border-2 border-black p-4 my-4 text-center font-mono bg-gray-50;
+    @apply border border-gray-300 rounded-lg p-6 my-4 text-center font-mono bg-gray-100;
   }
   
   .theorem-box {
-    @apply border-2 border-black p-4 my-4 bg-white;
+    @apply border-l-4 border-green-600 bg-green-50 p-6 my-4 rounded-r-lg;
   }
   
   .definition-box {
-    @apply border-2 border-dashed border-black p-4 my-4 bg-white;
+    @apply border-l-4 border-emerald-600 bg-emerald-50 p-6 my-4 rounded-r-lg;
   }
   
   .answer-box {
-    @apply bg-gray-200 border-2 border-black p-4 my-4 font-bold text-center;
+    @apply bg-green-100 border-l-4 border-green-600 p-6 my-4 font-semibold rounded-r-lg;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200 relative z-10;
+  }
+  
+  .btn-primary {
+    @apply bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors inline-block;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-800 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-900 transition-colors inline-block;
   }
   
   .print-break {

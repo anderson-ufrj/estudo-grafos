@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Estudo de Teoria dos Grafos',
-  description: 'Material didático interativo para o estudo de Teoria dos Grafos',
+  description: 'Material didático para o estudo de Teoria dos Grafos',
   authors: [{ name: 'Anderson Henrique' }],
   keywords: ['grafos', 'teoria dos grafos', 'matemática discreta', 'estudo', 'exercícios'],
 }
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className="font-serif">
+      <body className="font-sans antialiased">
         {children}
       </body>
     </html>

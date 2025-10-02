@@ -18,8 +18,9 @@ export default function Header() {
           <h1 className="text-4xl font-bold uppercase tracking-widest mb-4">
             Estudo de Teoria dos Grafos
           </h1>
-          <p className="text-xl font-semibold">Material Didático Interativo</p>
-          <p className="text-lg">IFSULDEMINAS - Campus Muzambinho</p>
+          <p className="text-xl font-semibold">Material Didático</p>
+          <p className="text-lg">Curso de Ciência da Computação</p>
+          <p className="text-base">IFSULDEMINAS - Campus Muzambinho</p>
           <p className="text-sm italic mt-2">
             Elaborado por Anderson Henrique • 28 de setembro de 2025
           </p>
