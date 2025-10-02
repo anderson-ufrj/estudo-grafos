@@ -1,6 +1,6 @@
 # 📚 Estudo de Teoria dos Grafos
 
-Material didático interativo para o estudo de Teoria dos Grafos, desenvolvido para auxiliar estudantes na preparação para provas e compreensão dos conceitos fundamentais.
+Material didático interativo para o estudo de Teoria dos Grafos, desenvolvido para auxiliar estudantes do IFSULDEMINAS - Campus Muzambinho na preparação para provas e compreensão dos conceitos fundamentais.
 
 ## 🎯 Objetivo
 

@@ -61,12 +61,18 @@ export default function Navigation() {
         </div>
       </div>
       
-      <div className="mt-4 pt-4 border-t border-black text-center">
+      <div className="mt-4 pt-4 border-t border-black text-center space-y-2">
         <Link 
           href="/roteiro" 
-          className="font-bold text-lg hover:underline"
+          className="font-bold text-lg hover:underline block"
         >
           📋 Ver Roteiro Completo de Estudo
+        </Link>
+        <Link 
+          href="/referencias" 
+          className="font-bold text-lg hover:underline block"
+        >
+          📚 Material de Referência (PDFs)
         </Link>
       </div>
     </nav>
