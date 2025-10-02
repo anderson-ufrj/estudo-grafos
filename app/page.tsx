@@ -71,7 +71,7 @@ export default function Home() {
               Material de Estudo
             </h1>
             <p className="text-xl mb-2 opacity-90">
-              Teoria dos Grafos - Prof. Ricardo Martins
+              Teoria dos Grafos - Professor Ricardo Martins
             </p>
             <p className="text-lg mb-8 opacity-80">
               Curso de Ciência da Computação
