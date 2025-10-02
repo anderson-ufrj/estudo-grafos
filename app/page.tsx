@@ -47,6 +47,21 @@ export default function Home() {
         </section>
 
         <section className="mt-12 print-break">
+          <div className="bg-gray-100 border-2 border-black p-6 mb-8">
+            <h3 className="font-bold text-lg mb-2">👨‍🏫 Sobre a Disciplina</h3>
+            <p className="mb-2">
+              <strong>Professor:</strong> Prof. Ricardo Martins
+            </p>
+            <p className="mb-2">
+              <strong>Instituição:</strong> IFSULDEMINAS - Campus Muzambinho
+            </p>
+            <p>
+              <strong>Disciplina:</strong> Teoria dos Grafos - Matemática Discreta
+            </p>
+          </div>
+        </section>
+        
+        <section className="mt-12 print-break">
           <h2 className="section-title">Como Usar Este Material</h2>
           
           <div className="space-y-4">
@@ -75,7 +90,17 @@ export default function Home() {
       
       <footer className="border-t-2 border-black mt-16 p-8 text-center text-sm">
         <p>Material de Estudo - Teoria dos Grafos</p>
+        <p>Prof. Ricardo Martins - IFSULDEMINAS Campus Muzambinho</p>
         <p>Elaborado por Anderson Henrique • 28/09/2025</p>
+        <p className="mt-2">
+          <a href="https://github.com/anderson-ufrj" className="underline hover:no-underline" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          {' • '}
+          <a href="mailto:andersonhs27@gmail.com" className="underline hover:no-underline">
+            andersonhs27@gmail.com
+          </a>
+        </p>
       </footer>
     </div>
   )

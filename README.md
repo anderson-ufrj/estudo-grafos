@@ -138,8 +138,14 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 **Anderson Henrique**
 
-- GitHub: [@anderson-henrique](https://github.com/anderson-henrique)
+- GitHub: [@anderson-ufrj](https://github.com/anderson-ufrj)
+- Email: andersonhs27@gmail.com
 - Data: 28 de setembro de 2025
+
+## 👨‍🏫 Professor
+
+**Prof. Ricardo Martins**  
+IFSULDEMINAS - Campus Muzambinho
 
 ---
 
