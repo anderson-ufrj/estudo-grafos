@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-white text-black;
+    background-image: 
+      repeating-linear-gradient(
+        transparent,
+        transparent 19px,
+        #e0e0e0 19px,
+        #e0e0e0 20px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 19px,
+        #e0e0e0 19px,
+        #e0e0e0 20px
+      );
+    background-size: 20px 20px;
+  }
+  
+  @media print {
+    body {
+      background: white;
+    }
+  }
+}
+
+@layer components {
+  .container-paper {
+    @apply max-w-4xl mx-auto bg-white shadow-lg;
+  }
+  
+  .section-title {
+    @apply text-2xl font-bold uppercase tracking-wide border-b-2 border-black pb-2 mb-6;
+  }
+  
+  .subsection-title {
+    @apply text-xl font-semibold border-l-4 border-black pl-4 my-4;
+  }
+  
+  .formula-box {
+    @apply border-2 border-black p-4 my-4 text-center font-mono bg-gray-50;
+  }
+  
+  .theorem-box {
+    @apply border-2 border-black p-4 my-4 bg-white;
+  }
+  
+  .definition-box {
+    @apply border-2 border-dashed border-black p-4 my-4 bg-white;
+  }
+  
+  .answer-box {
+    @apply bg-gray-200 border-2 border-black p-4 my-4 font-bold text-center;
+  }
+  
+  .print-break {
+    @apply break-inside-avoid;
+  }
+}
