@@ -1,0 +1,20 @@
+# Formato de commit em português
+# <tipo>: <descrição>
+#
+# Tipos permitidos:
+# feat: nova funcionalidade
+# fix: correção de bug
+# docs: documentação
+# style: formatação, ponto e vírgula faltando, etc
+# refactor: refatoração de código
+# test: adição ou correção de testes
+# chore: tarefas de build, configurações, etc
+#
+# Exemplo:
+# feat: adiciona página de exercícios resolvidos
+#
+# Corpo do commit (opcional):
+# Explicação mais detalhada das mudanças
+#
+# Rodapé (opcional):
+# Closes #123
