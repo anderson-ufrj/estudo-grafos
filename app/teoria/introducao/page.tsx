@@ -6,7 +6,6 @@ export default function IntroducaoPage() {
     <div className="min-h-screen bg-gray-50">
       <ModernHeader />
       
-      {/* Breadcrumb */}
       <div className="bg-white border-b">
         <div className="container-modern px-4 py-4">
           <nav className="text-sm">
@@ -28,7 +27,6 @@ export default function IntroducaoPage() {
           <div className="max-w-4xl mx-auto">
             <h1 className="section-title">Introdução aos Grafos</h1>
             
-            {/* Introdução */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
                 A Teoria dos Grafos é um ramo da matemática que estuda as relações entre objetos de um determinado conjunto. 
@@ -39,7 +37,6 @@ export default function IntroducaoPage() {
               </p>
             </div>
             
-            {/* Definição de Grafo */}
             <section className="mb-12">
               <h2 className="subsection-title">Definição Fundamental</h2>
               
@@ -53,7 +50,6 @@ export default function IntroducaoPage() {
               </div>
             </section>
 
-            {/* Elementos Básicos */}
             <section className="mb-12">
               <h2 className="subsection-title">Elementos Básicos</h2>
               
@@ -80,7 +76,6 @@ export default function IntroducaoPage() {
               </div>
             </section>
 
-            {/* Elementos Especiais */}
             <section className="mb-12">
               <h2 className="subsection-title">Elementos Especiais</h2>
               
@@ -102,7 +97,6 @@ export default function IntroducaoPage() {
               </div>
             </section>
 
-            {/* Tipos de Grafos */}
             <section className="mb-12">
               <h2 className="subsection-title">Tipos de Grafos</h2>
               
@@ -142,7 +136,6 @@ export default function IntroducaoPage() {
               </div>
             </section>
 
-            {/* Aplicações */}
             <section className="mb-12">
               <h2 className="subsection-title">Aplicações Práticas</h2>
               
@@ -155,7 +148,7 @@ export default function IntroducaoPage() {
               
               <div className="grid gap-4">
                 <div className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="font-bold text-green-600 mb-2">🗺️ Mapas e Rotas</h3>
+                  <h3 className="font-bold text-green-600 mb-2">Mapas e Rotas</h3>
                   <p className="text-gray-700">
                     <strong>Vértices:</strong> Cidades, cruzamentos<br/>
                     <strong>Arestas:</strong> Estradas, caminhos<br/>
@@ -164,7 +157,7 @@ export default function IntroducaoPage() {
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="font-bold text-green-600 mb-2">💻 Redes de Computadores</h3>
+                  <h3 className="font-bold text-green-600 mb-2">Redes de Computadores</h3>
                   <p className="text-gray-700">
                     <strong>Vértices:</strong> Computadores, servidores, roteadores<br/>
                     <strong>Arestas:</strong> Conexões de rede<br/>
@@ -173,7 +166,7 @@ export default function IntroducaoPage() {
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="font-bold text-green-600 mb-2">👥 Redes Sociais</h3>
+                  <h3 className="font-bold text-green-600 mb-2">Redes Sociais</h3>
                   <p className="text-gray-700">
                     <strong>Vértices:</strong> Pessoas, páginas<br/>
                     <strong>Arestas:</strong> Amizades, seguidos<br/>
@@ -182,7 +175,7 @@ export default function IntroducaoPage() {
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="font-bold text-green-600 mb-2">🧪 Estruturas Químicas</h3>
+                  <h3 className="font-bold text-green-600 mb-2">Estruturas Químicas</h3>
                   <p className="text-gray-700">
                     <strong>Vértices:</strong> Átomos<br/>
                     <strong>Arestas:</strong> Ligações químicas<br/>
@@ -192,7 +185,6 @@ export default function IntroducaoPage() {
               </div>
             </section>
 
-            {/* Problemas Clássicos */}
             <section className="mb-12">
               <h2 className="subsection-title">Problemas Clássicos</h2>
               
@@ -214,12 +206,11 @@ export default function IntroducaoPage() {
               </div>
             </section>
 
-            {/* Material de Referência */}
             <section className="mb-12">
               <h2 className="subsection-title">Material de Estudo</h2>
               
               <div className="bg-gray-100 rounded-lg p-6">
-                <h3 className="font-bold mb-4">📚 Material do Professor</h3>
+                <h3 className="font-bold mb-4">Material do Professor</h3>
                 <div className="space-y-3">
                   <a 
                     href="/ref/02. Considerações Iniciais Sobre Grafos.pdf"
@@ -234,7 +225,6 @@ export default function IntroducaoPage() {
               </div>
             </section>
             
-            {/* Navegação */}
             <div className="flex justify-between items-center pt-8 border-t">
               <Link href="/teoria/conjuntos" className="btn-secondary">
                 ← Anterior: Fundamentos de Conjuntos
