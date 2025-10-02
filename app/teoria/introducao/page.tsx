@@ -8,228 +8,201 @@ export default function IntroducaoPage() {
     <div className="min-h-screen bg-gray-50">
       <ModernHeader />
       
-      <div className="bg-white border-b">
-        <div className="container-modern px-4 py-4">
-          <nav className="text-sm">
-            <Link href="/" className="text-gray-600 hover:text-green-600">
+      <main className="container-modern px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <nav className="mb-8">
+            <Link href="/" className="text-green-600 hover:underline">
               Início
             </Link>
-            <span className="mx-2 text-gray-400">/</span>
-            <Link href="/teoria/introducao" className="text-gray-600 hover:text-green-600">
-              Teoria
-            </Link>
-            <span className="mx-2 text-gray-400">/</span>
-            <span className="text-gray-900 font-medium">Introdução aos Grafos</span>
+            <span className="mx-2 text-gray-500">/</span>
+            <span className="text-gray-700">Teoria</span>
+            <span className="mx-2 text-gray-500">/</span>
+            <span className="text-gray-900">Introdução aos Grafos</span>
           </nav>
-        </div>
-      </div>
-      
-      <main className="py-8">
-        <div className="container-modern px-4">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="section-title">Introdução aos Grafos</h1>
-            
-            <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                A Teoria dos Grafos é um ramo da matemática que estuda as relações entre objetos de um determinado conjunto. 
-                Os grafos são estruturas matemáticas usadas para modelar relações entre pares de objetos.
-              </p>
-              <p className="text-gray-700">
-                Nesta seção, exploraremos os conceitos fundamentais, tipos de grafos e suas aplicações práticas.
-              </p>
-            </div>
-            
+
+          <h1 className="text-4xl font-bold mb-8">Introdução aos Grafos</h1>
+
+          <div className="prose prose-lg max-w-none">
             <section className="mb-12">
-              <h2 className="subsection-title">Definição Fundamental</h2>
+              <h2 className="text-2xl font-bold mb-4">1. O que são Grafos?</h2>
               
-              <div className="definition-box">
-                <p className="font-bold uppercase mb-2 text-emerald-900">Definição de Grafo:</p>
-                <p>Um grafo G é definido como um par ordenado G = (V, E), onde:</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li><strong>V</strong> é um conjunto finito não vazio de vértices (ou nós)</li>
-                  <li><strong>E</strong> é um conjunto de arestas que conectam pares de vértices</li>
+              <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
+                <h3 className="text-xl font-semibold mb-3">Definição</h3>
+                <p className="text-gray-700 mb-4">
+                  Um grafo G é uma estrutura matemática definida por um par ordenado G = (V, E), onde:
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">•</span>
+                    <div>
+                      <strong>V:</strong> Conjunto não-vazio de vértices (ou nós)
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">•</span>
+                    <div>
+                      <strong>E:</strong> Conjunto de arestas (conexões entre vértices)
+                    </div>
+                  </li>
                 </ul>
               </div>
-            </section>
 
-            <section className="mb-12">
-              <h2 className="subsection-title">Elementos Básicos</h2>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="font-bold text-lg mb-3">Vértices</h3>
-                  <p className="text-gray-700 mb-2">
-                    São os pontos ou nós do grafo. Representam os objetos ou entidades do problema.
-                  </p>
-                  <div className="bg-gray-100 p-3 rounded font-mono text-sm">
-                    V = {v₁, v₂, v₃, ..., vₙ}
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-3">Aplicações Práticas</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-gray-50 p-4 rounded">
+                    <h4 className="font-semibold text-green-600 mb-2">Redes Sociais</h4>
+                    <p className="text-sm text-gray-700">Pessoas são vértices, amizades são arestas</p>
                   </div>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="font-bold text-lg mb-3">Arestas</h3>
-                  <p className="text-gray-700 mb-2">
-                    São as conexões entre vértices. Representam as relações entre os objetos.
-                  </p>
-                  <div className="bg-gray-100 p-3 rounded font-mono text-sm">
-                    E = {e₁, e₂, e₃, ..., eₘ}
+                  <div className="bg-gray-50 p-4 rounded">
+                    <h4 className="font-semibold text-green-600 mb-2">Mapas e GPS</h4>
+                    <p className="text-sm text-gray-700">Locais são vértices, estradas são arestas</p>
+                  </div>
+                  <div className="bg-gray-50 p-4 rounded">
+                    <h4 className="font-semibold text-green-600 mb-2">Circuitos Elétricos</h4>
+                    <p className="text-sm text-gray-700">Componentes são vértices, conexões são arestas</p>
+                  </div>
+                  <div className="bg-gray-50 p-4 rounded">
+                    <h4 className="font-semibold text-green-600 mb-2">Internet</h4>
+                    <p className="text-sm text-gray-700">Servidores são vértices, conexões de rede são arestas</p>
                   </div>
                 </div>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 className="subsection-title">Elementos Especiais</h2>
-              
-              <div className="space-y-4">
-                <div className="bg-white rounded-lg shadow-sm p-4 border-l-4 border-green-500">
-                  <h3 className="font-semibold mb-2">Loops</h3>
-                  <p>Arestas que conectam um vértice a si mesmo. Representadas como e = (v,v).</p>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-sm p-4 border-l-4 border-emerald-500">
-                  <h3 className="font-semibold mb-2">Arestas Paralelas (ou Múltiplas)</h3>
-                  <p>Duas ou mais arestas que conectam o mesmo par de vértices.</p>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-sm p-4 border-l-4 border-yellow-500">
-                  <h3 className="font-semibold mb-2">Vértices Isolados</h3>
-                  <p>Vértices que não possuem arestas incidentes (grau zero).</p>
-                </div>
-              </div>
-            </section>
-
-            <section className="mb-12">
-              <h2 className="subsection-title">Tipos de Grafos</h2>
-              
-              <div className="theorem-box">
-                <p className="font-bold uppercase mb-2 text-green-900">Grafo Simples</p>
-                <p>Um grafo que não possui loops nem arestas paralelas.</p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6 mt-6">
-                <div className="card">
-                  <h3 className="font-bold mb-2">Grafos Direcionados (Dígrafos)</h3>
-                  <p className="text-gray-700 text-sm">
-                    As arestas têm direção, representadas por pares ordenados de vértices.
-                  </p>
-                </div>
-                
-                <div className="card">
-                  <h3 className="font-bold mb-2">Grafos Não-direcionados</h3>
-                  <p className="text-gray-700 text-sm">
-                    As arestas não têm direção, a relação é simétrica.
-                  </p>
-                </div>
-                
-                <div className="card">
-                  <h3 className="font-bold mb-2">Grafos Ponderados</h3>
-                  <p className="text-gray-700 text-sm">
-                    As arestas possuem pesos ou custos associados.
-                  </p>
-                </div>
-                
-                <div className="card">
-                  <h3 className="font-bold mb-2">Grafos Bipartidos</h3>
-                  <p className="text-gray-700 text-sm">
-                    Vértices divididos em dois conjuntos disjuntos, com arestas apenas entre os conjuntos.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section className="mb-12">
-              <h2 className="subsection-title">Aplicações Práticas</h2>
-              
-              <div className="bg-green-50 border-l-4 border-green-600 p-6 mb-6">
-                <p className="font-bold mb-3">Grafos estão em toda parte!</p>
-                <p className="text-gray-700">
-                  A teoria dos grafos tem aplicações em diversas áreas do conhecimento e problemas do mundo real.
-                </p>
-              </div>
-              
-              <div className="grid gap-4">
-                <div className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="font-bold text-green-600 mb-2">Mapas e Rotas</h3>
-                  <p className="text-gray-700">
-                    <strong>Vértices:</strong> Cidades, cruzamentos<br/>
-                    <strong>Arestas:</strong> Estradas, caminhos<br/>
-                    <strong>Aplicação:</strong> GPS, sistemas de navegação
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="font-bold text-green-600 mb-2">Redes de Computadores</h3>
-                  <p className="text-gray-700">
-                    <strong>Vértices:</strong> Computadores, servidores, roteadores<br/>
-                    <strong>Arestas:</strong> Conexões de rede<br/>
-                    <strong>Aplicação:</strong> Internet, redes locais
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="font-bold text-green-600 mb-2">Redes Sociais</h3>
-                  <p className="text-gray-700">
-                    <strong>Vértices:</strong> Pessoas, páginas<br/>
-                    <strong>Arestas:</strong> Amizades, seguidos<br/>
-                    <strong>Aplicação:</strong> Facebook, Instagram, LinkedIn
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="font-bold text-green-600 mb-2">Estruturas Químicas</h3>
-                  <p className="text-gray-700">
-                    <strong>Vértices:</strong> Átomos<br/>
-                    <strong>Arestas:</strong> Ligações químicas<br/>
-                    <strong>Aplicação:</strong> Modelagem molecular
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section className="mb-12">
-              <h2 className="subsection-title">Problemas Clássicos</h2>
+              <h2 className="text-2xl font-bold mb-4">2. Tipos de Grafos</h2>
               
               <div className="space-y-6">
-                <div className="definition-box">
-                  <p className="font-bold uppercase mb-2 text-emerald-900">Problema do Caixeiro Viajante</p>
-                  <p>Encontrar o menor caminho que visita todas as cidades exatamente uma vez e retorna à origem.</p>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold mb-3 text-green-600">Grafo Não-Direcionado</h3>
+                  <p className="text-gray-700 mb-2">
+                    As arestas não possuem direção. Se existe uma aresta entre A e B, podemos ir de A para B ou de B para A.
+                  </p>
+                  <div className="bg-gray-100 p-3 rounded">
+                    <p className="font-mono text-sm">Notação: {'{'}u, v{'}'} ou uv</p>
+                  </div>
                 </div>
-                
-                <div className="definition-box">
-                  <p className="font-bold uppercase mb-2 text-emerald-900">Problema das Pontes de Königsberg</p>
-                  <p>Histórico problema que deu origem à teoria dos grafos. É possível atravessar todas as pontes uma única vez?</p>
+
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold mb-3 text-green-600">Grafo Direcionado (Digrafo)</h3>
+                  <p className="text-gray-700 mb-2">
+                    As arestas possuem direção. Uma aresta de A para B não implica em uma aresta de B para A.
+                  </p>
+                  <div className="bg-gray-100 p-3 rounded">
+                    <p className="font-mono text-sm">Notação: (u, v) ou u → v</p>
+                  </div>
                 </div>
-                
-                <div className="definition-box">
-                  <p className="font-bold uppercase mb-2 text-emerald-900">Coloração de Grafos</p>
-                  <p>Atribuir cores aos vértices de modo que vértices adjacentes tenham cores diferentes.</p>
+
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold mb-3 text-green-600">Grafo Ponderado</h3>
+                  <p className="text-gray-700 mb-2">
+                    Cada aresta possui um peso (valor) associado. Útil para representar distâncias, custos, capacidades.
+                  </p>
+                  <div className="bg-gray-100 p-3 rounded">
+                    <p className="font-mono text-sm">w(u,v) = peso da aresta entre u e v</p>
+                  </div>
                 </div>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 className="subsection-title">Material de Estudo</h2>
+              <h2 className="text-2xl font-bold mb-4">3. Terminologia Básica</h2>
               
-              <div className="bg-gray-100 rounded-lg p-6">
-                <h3 className="font-bold mb-4">Material do Professor</h3>
-                <div className="space-y-3">
-                  <a 
-                    href="/ref/02. Considerações Iniciais Sobre Grafos.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block bg-white p-4 rounded border hover:border-green-600 transition-colors"
-                  >
-                    <p className="font-semibold text-green-600">02. Considerações Iniciais Sobre Grafos.pdf</p>
-                    <p className="text-sm text-gray-600">Material completo sobre introdução aos grafos</p>
-                  </a>
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold mb-3">Conceitos Fundamentais</h3>
+                <dl className="space-y-4">
+                  <div>
+                    <dt className="font-semibold text-green-600">Adjacência</dt>
+                    <dd className="text-gray-700">Dois vértices são adjacentes se existe uma aresta entre eles</dd>
+                  </div>
+                  <div>
+                    <dt className="font-semibold text-green-600">Incidência</dt>
+                    <dd className="text-gray-700">Uma aresta é incidente a um vértice se o conecta a outro vértice</dd>
+                  </div>
+                  <div>
+                    <dt className="font-semibold text-green-600">Grau de um vértice</dt>
+                    <dd className="text-gray-700">
+                      Número de arestas incidentes ao vértice
+                      <div className="mt-2 bg-gray-100 p-2 rounded">
+                        <p className="font-mono text-sm">Notação: d(v) ou deg(v)</p>
+                      </div>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-semibold text-green-600">Laço (Loop)</dt>
+                    <dd className="text-gray-700">Aresta que conecta um vértice a ele mesmo</dd>
+                  </div>
+                  <div>
+                    <dt className="font-semibold text-green-600">Arestas Paralelas</dt>
+                    <dd className="text-gray-700">Duas ou mais arestas que conectam o mesmo par de vértices</dd>
+                  </div>
+                </dl>
+              </div>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">4. Propriedades Importantes</h2>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold mb-3">Teorema do Aperto de Mãos</h3>
+                  <p className="text-gray-700 mb-3">
+                    A soma dos graus de todos os vértices é igual ao dobro do número de arestas.
+                  </p>
+                  <div className="bg-green-50 p-3 rounded">
+                    <p className="font-mono text-sm">Σ d(v) = 2|E|</p>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold mb-3">Consequência</h3>
+                  <p className="text-gray-700 mb-3">
+                    Em qualquer grafo, o número de vértices com grau ímpar é sempre par.
+                  </p>
                 </div>
               </div>
             </section>
-            
-            <div className="flex justify-between items-center pt-8 border-t">
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">5. Grafos Especiais</h2>
+              
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h3 className="font-semibold text-green-600 mb-2">Grafo Completo (Kn)</h3>
+                  <p className="text-sm text-gray-700">
+                    Todo par de vértices está conectado
+                  </p>
+                  <p className="font-mono text-xs mt-2">|E| = n(n-1)/2</p>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h3 className="font-semibold text-green-600 mb-2">Grafo Bipartido</h3>
+                  <p className="text-sm text-gray-700">
+                    Vértices divididos em dois conjuntos disjuntos
+                  </p>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h3 className="font-semibold text-green-600 mb-2">Ciclo (Cn)</h3>
+                  <p className="text-sm text-gray-700">
+                    Grafo em forma de círculo com n vértices
+                  </p>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h3 className="font-semibold text-green-600 mb-2">Árvore</h3>
+                  <p className="text-sm text-gray-700">
+                    Grafo conexo sem ciclos
+                  </p>
+                  <p className="font-mono text-xs mt-2">|E| = |V| - 1</p>
+                </div>
+              </div>
+            </section>
+
+            <div className="mt-12 flex justify-between">
               <Link href="/teoria/conjuntos" className="btn-secondary">
-                ← Anterior: Fundamentos de Conjuntos
+                ← Anterior: Conjuntos
               </Link>
               <Link href="/teoria/caminhos" className="btn-primary">
                 Próximo: Caminhos e Ciclos →

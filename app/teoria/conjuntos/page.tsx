@@ -8,151 +8,183 @@ export default function ConjuntosPage() {
     <div className="min-h-screen bg-gray-50">
       <ModernHeader />
       
-      <div className="bg-white border-b">
-        <div className="container-modern px-4 py-4">
-          <nav className="text-sm">
-            <Link href="/" className="text-gray-600 hover:text-green-600">
+      <main className="container-modern px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <nav className="mb-8">
+            <Link href="/" className="text-green-600 hover:underline">
               Início
             </Link>
-            <span className="mx-2 text-gray-400">/</span>
-            <Link href="/teoria/conjuntos" className="text-gray-600 hover:text-green-600">
-              Teoria
-            </Link>
-            <span className="mx-2 text-gray-400">/</span>
-            <span className="text-gray-900 font-medium">Fundamentos de Conjuntos</span>
+            <span className="mx-2 text-gray-500">/</span>
+            <span className="text-gray-700">Teoria</span>
+            <span className="mx-2 text-gray-500">/</span>
+            <span className="text-gray-900">Fundamentos de Conjuntos</span>
           </nav>
-        </div>
-      </div>
-      
-      <main className="py-8">
-        <div className="container-modern px-4">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="section-title">Fundamentos de Conjuntos</h1>
-            
-            <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Os fundamentos de conjuntos formam a base matemática essencial para o estudo 
-                de Teoria dos Grafos. Nesta seção, exploraremos os conceitos fundamentais que 
-                serão utilizados ao longo de todo o curso.
-              </p>
-            </div>
-            
+
+          <h1 className="text-4xl font-bold mb-8">Fundamentos de Conjuntos</h1>
+
+          <div className="prose prose-lg max-w-none">
             <section className="mb-12">
-              <h2 className="subsection-title">Conjunto Potência</h2>
+              <h2 className="text-2xl font-bold mb-4">1. Teoria dos Conjuntos</h2>
               
-              <div className="definition-box">
-                <p className="font-bold uppercase mb-2 text-emerald-900">Definição:</p>
-                <p>O conjunto potência 2^A é a família de todos os subconjuntos de um conjunto A.</p>
+              <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
+                <h3 className="text-xl font-semibold mb-3">Definição de Conjunto</h3>
+                <p className="text-gray-700 mb-4">
+                  Um conjunto é uma coleção bem definida de objetos distintos, chamados elementos ou membros do conjunto.
+                </p>
+                <div className="bg-gray-100 p-4 rounded-lg">
+                  <p className="font-mono text-sm">
+                    Notação: A = {'{'}1, 2, 3, 4{'}'}
+                  </p>
+                  <p className="text-sm text-gray-600 mt-2">
+                    Lê-se: A é o conjunto formado pelos elementos 1, 2, 3 e 4.
+                  </p>
+                </div>
               </div>
-              
-              <div className="formula-box">
-                <p className="text-2xl">|2^A| = 2^|A|</p>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
+                <h3 className="text-xl font-semibold mb-3">Formas de Representação</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">•</span>
+                    <div>
+                      <strong>Por extensão:</strong> Listar todos os elementos
+                      <p className="text-gray-600 text-sm mt-1">A = {'{'}a, e, i, o, u{'}'}</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">•</span>
+                    <div>
+                      <strong>Por compreensão:</strong> Descrever uma propriedade
+                      <p className="text-gray-600 text-sm mt-1">B = {'{'}x | x é vogal do alfabeto{'}'}</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">•</span>
+                    <div>
+                      <strong>Diagrama de Venn:</strong> Representação visual
+                    </div>
+                  </li>
+                </ul>
               </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
+                <h3 className="text-xl font-semibold mb-3">Relação de Pertinência</h3>
+                <div className="space-y-2">
+                  <p className="font-mono">x ∈ A → x pertence a A</p>
+                  <p className="font-mono">x ∉ A → x não pertence a A</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-3">Conjuntos Especiais</h3>
+                <ul className="space-y-2">
+                  <li><strong>Conjunto vazio:</strong> ∅ ou {'{'}{'}'}</li>
+                  <li><strong>Conjunto universo:</strong> U (contém todos os elementos do contexto)</li>
+                  <li><strong>Conjunto unitário:</strong> possui apenas um elemento</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">2. Operações com Conjuntos</h2>
               
-              <div className="bg-white rounded-lg shadow-sm p-6 my-6">
-                <p className="font-semibold mb-3">Exemplo Prático:</p>
-                <div className="bg-gray-50 p-4 rounded font-mono text-sm">
-                  <p>Se A = {1, 2}, então:</p>
-                  <p>2^A = {∅, {1}, {2}, {1,2}}</p>
-                  <p>|2^A| = 2^2 = 4 elementos</p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold mb-3">União (A ∪ B)</h3>
+                  <p className="text-gray-700 mb-2">
+                    Elementos que pertencem a A ou B (ou ambos)
+                  </p>
+                  <p className="font-mono text-sm bg-gray-100 p-2 rounded">
+                    A ∪ B = {'{'}x | x ∈ A ou x ∈ B{'}'}
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold mb-3">Interseção (A ∩ B)</h3>
+                  <p className="text-gray-700 mb-2">
+                    Elementos que pertencem a A e B simultaneamente
+                  </p>
+                  <p className="font-mono text-sm bg-gray-100 p-2 rounded">
+                    A ∩ B = {'{'}x | x ∈ A e x ∈ B{'}'}
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold mb-3">Diferença (A - B)</h3>
+                  <p className="text-gray-700 mb-2">
+                    Elementos que pertencem a A mas não a B
+                  </p>
+                  <p className="font-mono text-sm bg-gray-100 p-2 rounded">
+                    A - B = {'{'}x | x ∈ A e x ∉ B{'}'}
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold mb-3">Complemento (Aᶜ)</h3>
+                  <p className="text-gray-700 mb-2">
+                    Elementos do universo que não estão em A
+                  </p>
+                  <p className="font-mono text-sm bg-gray-100 p-2 rounded">
+                    Aᶜ = U - A = {'{'}x | x ∈ U e x ∉ A{'}'}
+                  </p>
                 </div>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 className="subsection-title">Produto Cartesiano</h2>
+              <h2 className="text-2xl font-bold mb-4">3. Propriedades das Operações</h2>
               
-              <div className="definition-box">
-                <p className="font-bold uppercase mb-2 text-emerald-900">Definição:</p>
-                <p>A × B = {(a,b) | a ∈ A e b ∈ B}</p>
-              </div>
-              
-              <div className="formula-box">
-                <p className="text-2xl">|A × B| = |A| × |B|</p>
-              </div>
-              
-              <div className="bg-amber-50 border-l-4 border-amber-500 p-4 my-6">
-                <p className="font-semibold text-amber-900 mb-2">Propriedade importante:</p>
-                <p>A × B ≠ B × A (quando A ≠ B e ambos não vazios)</p>
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold mb-3">Propriedades Fundamentais</h3>
+                <div className="space-y-3">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <h4 className="font-semibold text-green-600">Comutativa</h4>
+                      <p className="font-mono text-sm">A ∪ B = B ∪ A</p>
+                      <p className="font-mono text-sm">A ∩ B = B ∩ A</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-green-600">Associativa</h4>
+                      <p className="font-mono text-sm">(A ∪ B) ∪ C = A ∪ (B ∪ C)</p>
+                      <p className="font-mono text-sm">(A ∩ B) ∩ C = A ∩ (B ∩ C)</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-green-600">Distributiva</h4>
+                      <p className="font-mono text-sm">A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)</p>
+                      <p className="font-mono text-sm">A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-green-600">Leis de De Morgan</h4>
+                      <p className="font-mono text-sm">(A ∪ B)ᶜ = Aᶜ ∩ Bᶜ</p>
+                      <p className="font-mono text-sm">(A ∩ B)ᶜ = Aᶜ ∪ Bᶜ</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 className="subsection-title">Tipos de Funções</h2>
+              <h2 className="text-2xl font-bold mb-4">4. Produto Cartesiano</h2>
               
-              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-gray-800 text-white">
-                      <th className="px-6 py-3 text-left">Tipo</th>
-                      <th className="px-6 py-3 text-left">Definição</th>
-                      <th className="px-6 py-3 text-left">Propriedade</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b">
-                      <td className="px-6 py-4 font-semibold">Total</td>
-                      <td className="px-6 py-4">f: A → B</td>
-                      <td className="px-6 py-4">Domínio = A completo</td>
-                    </tr>
-                    <tr className="border-b bg-gray-50">
-                      <td className="px-6 py-4 font-semibold">Injetora</td>
-                      <td className="px-6 py-4">f(x) = f(y) ⇒ x = y</td>
-                      <td className="px-6 py-4">Um para um</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="px-6 py-4 font-semibold">Sobrejetora</td>
-                      <td className="px-6 py-4">∀b ∈ B, ∃a ∈ A: f(a) = b</td>
-                      <td className="px-6 py-4">Cobre todo B</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 font-semibold">Bijetora</td>
-                      <td className="px-6 py-4">Injetora + Sobrejetora</td>
-                      <td className="px-6 py-4">Correspondência 1-1</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-              <div className="formula-box mt-6">
-                <p className="text-xl">Número de funções totais de A em B = |B|^|A|</p>
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold mb-3">Definição</h3>
+                <p className="text-gray-700 mb-4">
+                  O produto cartesiano de dois conjuntos A e B é o conjunto de todos os pares ordenados (a,b) onde a ∈ A e b ∈ B.
+                </p>
+                <div className="bg-gray-100 p-4 rounded-lg">
+                  <p className="font-mono text-sm">A × B = {'{'}(a,b) | a ∈ A e b ∈ B{'}'}</p>
+                </div>
+                <div className="mt-4">
+                  <p className="font-semibold">Exemplo:</p>
+                  <p className="font-mono text-sm">A = {'{'}1, 2{'}'}, B = {'{'}a, b{'}'}</p>
+                  <p className="font-mono text-sm">A × B = {'{'}(1,a), (1,b), (2,a), (2,b){'}'}</p>
+                </div>
               </div>
             </section>
 
-            <section className="mb-12">
-              <h2 className="subsection-title">Relações Binárias</h2>
-              
-              <h3 className="font-bold text-lg mt-6 mb-4">Propriedades de Relações</h3>
-              
-              <div className="grid gap-4">
-                <div className="bg-white rounded-lg shadow-sm p-4 border-l-4 border-green-500">
-                  <p><strong>Reflexiva (R):</strong> ∀a ∈ A, (a,a) ∈ R</p>
-                </div>
-                <div className="bg-white rounded-lg shadow-sm p-4 border-l-4 border-green-500">
-                  <p><strong>Simétrica (S):</strong> (a,b) ∈ R → (b,a) ∈ R</p>
-                </div>
-                <div className="bg-white rounded-lg shadow-sm p-4 border-l-4 border-yellow-500">
-                  <p><strong>Anti-simétrica (AS):</strong> (a,b) ∈ R ∧ (b,a) ∈ R → a = b</p>
-                </div>
-                <div className="bg-white rounded-lg shadow-sm p-4 border-l-4 border-red-500">
-                  <p><strong>Transitiva (T):</strong> (a,b) ∈ R ∧ (b,c) ∈ R → (a,c) ∈ R</p>
-                </div>
-              </div>
-              
-              <div className="theorem-box mt-8">
-                <p className="font-bold uppercase mb-2 text-green-900">Relação de Equivalência = R + S + T</p>
-                <p>Induz uma partição do conjunto em classes de equivalência</p>
-              </div>
-              
-              <div className="theorem-box">
-                <p className="font-bold uppercase mb-2 text-green-900">Relação de Ordem Parcial = R + AS + T</p>
-                <p>Define uma estrutura de ordenação no conjunto</p>
-              </div>
-            </section>
-            
-            <div className="flex justify-between items-center pt-8 border-t">
+            <div className="mt-12 flex justify-between">
               <Link href="/" className="btn-secondary">
-                ← Voltar ao início
+                ← Voltar ao Início
               </Link>
               <Link href="/teoria/introducao" className="btn-primary">
                 Próximo: Introdução aos Grafos →
