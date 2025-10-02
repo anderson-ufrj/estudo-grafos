@@ -126,9 +126,11 @@ Contribuições são bem-vindas! Para contribuir:
 
 1. Faça um fork do projeto
 2. Crie uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`)
-3. Commit suas mudanças (`git commit -m 'feat: adiciona nova funcionalidade'`)
+3. Commit suas mudanças em português (`git commit -m 'feat: adiciona nova funcionalidade'`)
 4. Push para a branch (`git push origin feature/nova-funcionalidade`)
 5. Abra um Pull Request
+
+**Importante**: Este projeto utiliza commits em português. Consulte o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para ver o padrão de commits.
 
 ## 📄 Licença
 
