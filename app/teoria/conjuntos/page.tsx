@@ -2,26 +2,27 @@
 
 import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
+import Breadcrumb from '@/app/components/Breadcrumb'
 
 export default function ConjuntosPage() {
   return (
     <>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
         <ModernHeader />
-        
+
         <main className="container-modern px-4 py-8">
           <div className="max-w-4xl mx-auto">
-            <nav className="mb-8">
-              <Link href="/" className="text-green-600 hover:underline">
-                Início
-              </Link>
-              <span className="mx-2 text-gray-500">/</span>
-              <span className="text-gray-700">Teoria</span>
-              <span className="mx-2 text-gray-500">/</span>
-              <span className="text-gray-900">Fundamentos de Conjuntos</span>
-            </nav>
+            <Breadcrumb
+              items={[
+                { label: 'Início', href: '/' },
+                { label: 'Teoria', href: '/teoria/conjuntos' },
+                { label: 'Fundamentos de Conjuntos' }
+              ]}
+              currentStep={1}
+              totalSteps={5}
+            />
 
-            <h1 className="text-4xl font-bold mb-8">Fundamentos de Conjuntos</h1>
+            <h1 className="text-4xl font-bold mb-8 dark:text-gray-100">Fundamentos de Conjuntos</h1>
 
             <div className="prose prose-lg max-w-none">
               <section className="mb-12">
