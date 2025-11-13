@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from './context/ThemeContext'
 import { ProgressProvider } from './context/ProgressContext'
+import VLibras from './components/VLibras'
 
 export const metadata: Metadata = {
   title: 'Estudo de Teoria dos Grafos',
@@ -24,21 +25,9 @@ export default function RootLayout({
         <ThemeProvider>
           <ProgressProvider>
             {children}
-            <div data-vw="true" className="enabled">
-              <div data-vw-access-button="true" className="active"></div>
-              <div data-vw-plugin-wrapper="true">
-                <div className="vw-plugin-top-wrapper"></div>
-              </div>
-            </div>
+            <VLibras />
           </ProgressProvider>
         </ThemeProvider>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            if (typeof window !== 'undefined') {
-              new window.VLibras.Widget('https://vlibras.gov.br/app');
-            }
-          `
-        }} />
       </body>
     </html>
   )
