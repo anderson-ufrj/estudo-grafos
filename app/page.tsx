@@ -6,7 +6,7 @@ import ModernHeader from './components/ModernHeader'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <ModernHeader />
       
       <main>
@@ -90,7 +90,7 @@ export default function Home() {
         {/* Features Grid */}
         <section className="py-16">
           <div className="container-modern px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Conteúdo Disponível</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">Conteúdo Disponível</h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="card">
@@ -141,71 +141,71 @@ export default function Home() {
         </section>
 
         {/* Study Resources */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white dark:bg-gray-800">
           <div className="container-modern px-4">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-bold mb-6">Recursos de Estudo</h2>
+                <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">Recursos de Estudo</h2>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
+                    <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg">
                       <span className="text-2xl">📖</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Material Teórico Completo</h3>
-                      <p className="text-gray-600 text-sm">
+                      <h3 className="font-semibold mb-1 text-gray-900 dark:text-gray-100">Material Teórico Completo</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">
                         Resumos detalhados de todos os tópicos com exemplos práticos
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
+                    <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg">
                       <span className="text-2xl">✏️</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Exercícios Resolvidos</h3>
-                      <p className="text-gray-600 text-sm">
+                      <h3 className="font-semibold mb-1 text-gray-900 dark:text-gray-100">Exercícios Resolvidos</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">
                         Soluções passo a passo para melhor compreensão
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
-                    <div className="bg-emerald-100 p-3 rounded-lg">
+                    <div className="bg-emerald-100 dark:bg-emerald-900/30 p-3 rounded-lg">
                       <span className="text-2xl">🎯</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Fórmulas Essenciais</h3>
-                      <p className="text-gray-600 text-sm">
+                      <h3 className="font-semibold mb-1 text-gray-900 dark:text-gray-100">Fórmulas Essenciais</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">
                         Todas as fórmulas importantes organizadas por tópico
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              <div className="bg-gray-100 rounded-lg p-8">
-                <h3 className="font-bold text-xl mb-4">📋 Informações da Disciplina</h3>
-                <dl className="space-y-3">
+
+              <div className="bg-gray-100 dark:bg-gray-700/50 rounded-lg p-8">
+                <h3 className="font-bold text-xl mb-4 text-gray-900 dark:text-gray-100">📋 Informações da Disciplina</h3>
+                <dl className="space-y-3 text-gray-900 dark:text-gray-100">
                   <div>
-                    <dt className="font-semibold text-gray-700">Professor:</dt>
+                    <dt className="font-semibold text-gray-700 dark:text-gray-300">Professor:</dt>
                     <dd>Prof. Ricardo Martins</dd>
                   </div>
                   <div>
-                    <dt className="font-semibold text-gray-700">Instituição:</dt>
+                    <dt className="font-semibold text-gray-700 dark:text-gray-300">Instituição:</dt>
                     <dd>IFSULDEMINAS - Campus Muzambinho</dd>
                   </div>
                   <div>
-                    <dt className="font-semibold text-gray-700">Curso:</dt>
+                    <dt className="font-semibold text-gray-700 dark:text-gray-300">Curso:</dt>
                     <dd>Ciência da Computação</dd>
                   </div>
                   <div>
-                    <dt className="font-semibold text-gray-700">Disciplina:</dt>
+                    <dt className="font-semibold text-gray-700 dark:text-gray-300">Disciplina:</dt>
                     <dd>Teoria dos Grafos - Matemática Discreta</dd>
                   </div>
                   <div>
-                    <dt className="font-semibold text-gray-700">Material elaborado por:</dt>
+                    <dt className="font-semibold text-gray-700 dark:text-gray-300">Material elaborado por:</dt>
                     <dd>Anderson Henrique</dd>
                   </div>
                 </dl>
@@ -222,7 +222,7 @@ export default function Home() {
         {/* Quick Links */}
         <section className="py-16">
           <div className="container-modern px-4">
-            <h2 className="text-3xl font-bold text-center mb-8">Acesso Rápido</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">Acesso Rápido</h2>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <Link href="/teoria/formulas" className="card text-center hover:border-green-600 transition-colors group">
                 <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform">🔢</span>
