@@ -38,11 +38,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     document.documentElement.classList.toggle('dark', newTheme === 'dark')
   }
 
-  // Evitar flash de conteúdo não-estilizado
-  if (!mounted) {
-    return <>{children}</>
-  }
-
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
@@ -52,7 +47,12 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
 export function useTheme() {
   const context = useContext(ThemeContext)
+  // Durante SSR, retornar valores padrão ao invés de erro
   if (context === undefined) {
+    // Se estamos no servidor (typeof window === 'undefined'), retornar valores seguros
+    if (typeof window === 'undefined') {
+      return { theme: 'light' as Theme, toggleTheme: () => {} }
+    }
     throw new Error('useTheme must be used within a ThemeProvider')
   }
   return context
