@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
+import GraphSVG from '@/app/components/GraphSVG'
 
 export default function IntroducaoPage() {
   return (
@@ -167,36 +168,110 @@ export default function IntroducaoPage() {
 
               <section className="mb-12">
                 <h2 className="text-2xl font-bold mb-4">5. Grafos Especiais</h2>
-                
-                <div className="grid md:grid-cols-2 gap-4">
+
+                <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <h3 className="font-semibold text-green-600 mb-2">Grafo Completo (Kn)</h3>
-                    <p className="text-sm text-gray-700">
+                    <h3 className="font-semibold text-green-600 mb-3">Grafo Completo (K₄)</h3>
+                    <p className="text-sm text-gray-700 mb-4">
                       Todo par de vértices está conectado
                     </p>
-                    <p className="font-mono text-xs mt-2">|E| = n(n-1)/2</p>
+                    <GraphSVG
+                      width={250}
+                      height={250}
+                      nodes={[
+                        { id: '1', x: 125, y: 40 },
+                        { id: '2', x: 50, y: 150 },
+                        { id: '3', x: 200, y: 150 },
+                        { id: '4', x: 125, y: 210 }
+                      ]}
+                      edges={[
+                        { from: '1', to: '2' },
+                        { from: '1', to: '3' },
+                        { from: '1', to: '4' },
+                        { from: '2', to: '3' },
+                        { from: '2', to: '4' },
+                        { from: '3', to: '4' }
+                      ]}
+                    />
+                    <p className="font-mono text-xs mt-3 text-center">|E| = 4(3)/2 = 6 arestas</p>
                   </div>
 
                   <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <h3 className="font-semibold text-green-600 mb-2">Grafo Bipartido</h3>
-                    <p className="text-sm text-gray-700">
-                      Vértices divididos em dois conjuntos disjuntos
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <h3 className="font-semibold text-green-600 mb-2">Ciclo (Cn)</h3>
-                    <p className="text-sm text-gray-700">
+                    <h3 className="font-semibold text-green-600 mb-3">Ciclo (C₅)</h3>
+                    <p className="text-sm text-gray-700 mb-4">
                       Grafo em forma de círculo com n vértices
                     </p>
+                    <GraphSVG
+                      width={250}
+                      height={250}
+                      nodes={[
+                        { id: '1', x: 125, y: 40 },
+                        { id: '2', x: 220, y: 100 },
+                        { id: '3', x: 180, y: 200 },
+                        { id: '4', x: 70, y: 200 },
+                        { id: '5', x: 30, y: 100 }
+                      ]}
+                      edges={[
+                        { from: '1', to: '2' },
+                        { from: '2', to: '3' },
+                        { from: '3', to: '4' },
+                        { from: '4', to: '5' },
+                        { from: '5', to: '1' }
+                      ]}
+                    />
+                    <p className="font-mono text-xs mt-3 text-center">|V| = |E| = 5</p>
                   </div>
 
                   <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <h3 className="font-semibold text-green-600 mb-2">Árvore</h3>
-                    <p className="text-sm text-gray-700">
+                    <h3 className="font-semibold text-green-600 mb-3">Árvore</h3>
+                    <p className="text-sm text-gray-700 mb-4">
                       Grafo conexo sem ciclos
                     </p>
-                    <p className="font-mono text-xs mt-2">|E| = |V| - 1</p>
+                    <GraphSVG
+                      width={250}
+                      height={250}
+                      nodes={[
+                        { id: '1', x: 125, y: 40 },
+                        { id: '2', x: 60, y: 120 },
+                        { id: '3', x: 190, y: 120 },
+                        { id: '4', x: 30, y: 200 },
+                        { id: '5', x: 90, y: 200 },
+                        { id: '6', x: 220, y: 200 }
+                      ]}
+                      edges={[
+                        { from: '1', to: '2' },
+                        { from: '1', to: '3' },
+                        { from: '2', to: '4' },
+                        { from: '2', to: '5' },
+                        { from: '3', to: '6' }
+                      ]}
+                    />
+                    <p className="font-mono text-xs mt-3 text-center">|E| = |V| - 1 = 5</p>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <h3 className="font-semibold text-green-600 mb-3">Grafo Bipartido</h3>
+                    <p className="text-sm text-gray-700 mb-4">
+                      Vértices divididos em dois conjuntos disjuntos
+                    </p>
+                    <GraphSVG
+                      width={250}
+                      height={250}
+                      nodes={[
+                        { id: '1', x: 60, y: 70, label: 'A' },
+                        { id: '2', x: 60, y: 150, label: 'B' },
+                        { id: '3', x: 190, y: 70, label: '1' },
+                        { id: '4', x: 190, y: 150, label: '2' },
+                        { id: '5', x: 190, y: 230, label: '3' }
+                      ]}
+                      edges={[
+                        { from: '1', to: '3' },
+                        { from: '1', to: '4' },
+                        { from: '2', to: '3' },
+                        { from: '2', to: '5' }
+                      ]}
+                    />
+                    <p className="font-mono text-xs mt-3 text-center">V = V₁ ∪ V₂, V₁ ∩ V₂ = ∅</p>
                   </div>
                 </div>
               </section>
