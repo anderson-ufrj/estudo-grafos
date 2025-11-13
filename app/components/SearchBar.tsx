@@ -12,18 +12,34 @@ interface SearchResult {
 
 // Base de dados de conteúdo para busca
 const searchDatabase: SearchResult[] = [
-  // Teoria
-  { title: 'Fundamentos de Conjuntos', category: 'Teoria', url: '/teoria/conjuntos', excerpt: 'Conjunto potência, produto cartesiano, operações, relações' },
-  { title: 'Introdução aos Grafos', category: 'Teoria', url: '/teoria/introducao', excerpt: 'Definição de grafos, vértices, arestas, tipos de grafos' },
-  { title: 'Caminhos e Ciclos', category: 'Teoria', url: '/teoria/caminhos', excerpt: 'Passeio, trilha, caminho, conectividade, teorema aperto mãos' },
-  { title: 'Representação Matricial', category: 'Teoria', url: '/teoria/matrizes', excerpt: 'Matriz adjacência, matriz incidência, potências' },
-  { title: 'Fórmulas Essenciais', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Todas fórmulas importantes, teoremas, complexidades' },
+  // Teoria - Páginas principais
+  { title: 'Fundamentos de Conjuntos', category: 'Teoria', url: '/teoria/conjuntos', excerpt: 'Conjunto potência, produto cartesiano, operações, relações, De Morgan' },
+  { title: 'Introdução aos Grafos', category: 'Teoria', url: '/teoria/introducao', excerpt: 'Definição de grafos, vértices, arestas, tipos de grafos, grafo completo, bipartido' },
+  { title: 'Caminhos e Ciclos', category: 'Teoria', url: '/teoria/caminhos', excerpt: 'Passeio, trilha, caminho, conectividade, teorema aperto mãos, Euler' },
+  { title: 'Representação Matricial', category: 'Teoria', url: '/teoria/matrizes', excerpt: 'Matriz adjacência, matriz incidência, potências, Floyd-Warshall, DFS, BFS' },
+  { title: 'Fórmulas Essenciais', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Todas fórmulas importantes, teoremas, complexidades, algoritmos' },
+
   // Exercícios
-  { title: 'Exercícios Resolvidos', category: 'Exercícios', url: '/exercicios/todos', excerpt: 'Produto cartesiano, funções, grafos, matrizes, caminhos' },
-  // Keywords extras para melhorar busca
-  { title: 'Teorema do Aperto de Mãos', category: 'Teoria', url: '/teoria/caminhos', excerpt: 'Soma graus vértices igual dobro número arestas' },
-  { title: 'Grafo Completo', category: 'Teoria', url: '/teoria/introducao', excerpt: 'K4 todos vértices conectados' },
-  { title: 'Ciclo Euleriano', category: 'Teoria', url: '/teoria/caminhos', excerpt: 'Passa todas arestas exatamente uma vez' },
+  { title: 'Exercícios Resolvidos', category: 'Exercícios', url: '/exercicios/todos', excerpt: 'Produto cartesiano, funções, grafos, matrizes, caminhos resolvidos' },
+
+  // Algoritmos - busca por nome
+  { title: 'Algoritmo de Prim', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Árvore geradora mínima, complexidade O(V+E log V)' },
+  { title: 'Algoritmo de Kruskal', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Árvore geradora mínima, complexidade O(E log E)' },
+  { title: 'Algoritmo de Dijkstra', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Menor caminho, complexidade O(V+E log V)' },
+  { title: 'Floyd-Warshall', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Todos pares menores caminhos, complexidade O(V³)' },
+  { title: 'BFS - Busca em Largura', category: 'Teoria', url: '/teoria/matrizes', excerpt: 'Busca por níveis, fila, complexidade O(V+E)' },
+  { title: 'DFS - Busca em Profundidade', category: 'Teoria', url: '/teoria/matrizes', excerpt: 'Busca recursiva, pilha, complexidade O(V+E)' },
+
+  // Conceitos importantes
+  { title: 'Teorema do Aperto de Mãos', category: 'Teoria', url: '/teoria/caminhos', excerpt: 'Soma dos graus é o dobro das arestas' },
+  { title: 'Grafo Completo', category: 'Teoria', url: '/teoria/introducao', excerpt: 'Todos vértices conectados, K4, K5, Kn' },
+  { title: 'Grafo Bipartido', category: 'Teoria', url: '/teoria/introducao', excerpt: 'Dois conjuntos de vértices, arestas só entre conjuntos' },
+  { title: 'Árvore', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Grafo acíclico conexo, |E| = |V| - 1' },
+  { title: 'Ciclo Euleriano', category: 'Teoria', url: '/teoria/caminhos', excerpt: 'Passa por todas arestas uma vez, todos vértices grau par' },
+  { title: 'Caminho Euleriano', category: 'Teoria', url: '/teoria/caminhos', excerpt: 'Exatamente 2 vértices com grau ímpar' },
+  { title: 'Fórmula de Euler', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Grafos planares, V - E + F = 2' },
+  { title: 'Grau de Vértice', category: 'Teoria', url: '/teoria/introducao', excerpt: 'Número de arestas incidentes, deg(v)' },
+  { title: 'Grafo Planar', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Pode ser desenhado sem cruzamentos, |E| ≤ 3|V| - 6' },
 ]
 
 export default function SearchBar() {

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Header from '@/app/components/Header'
+import ModernHeader from '@/app/components/ModernHeader'
 
 export default function ReferenciasPage() {
   const materiais = [
@@ -49,29 +49,34 @@ export default function ReferenciasPage() {
   ]
 
   return (
-    <div className="container-paper min-h-screen">
-      <Header />
-      
-      <main className="p-8">
-        <Link href="/" className="text-sm hover:underline mb-4 inline-block">
-          ← Voltar ao início
-        </Link>
-        
-        <h1 className="section-title">Material de Referência</h1>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <ModernHeader />
+
+      <main className="container-modern px-4 py-8">
+        <nav className="mb-8">
+          <Link href="/" className="text-green-600 hover:underline">
+            Início
+          </Link>
+          <span className="mx-2 text-gray-500 dark:text-gray-400">/</span>
+          <span className="text-gray-900 dark:text-gray-100">Material de Referência</span>
+        </nav>
+
+        <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">Material de Referência</h1>
+        <p className="text-gray-600 dark:text-gray-400 mb-8">PDFs originais e listas de exercícios da disciplina</p>
         
         <section className="mb-12 print-break">
-          <h2 className="subsection-title">📚 Material Teórico Original</h2>
-          
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">📚 Material Teórico Original</h2>
+
           <div className="grid gap-4">
             {materiais.map((material, index) => (
-              <div key={index} className="border-2 border-black p-4 hover:bg-gray-50 transition-colors">
-                <h3 className="font-bold text-lg mb-2">{material.titulo}</h3>
-                <p className="text-gray-700 mb-3">{material.descricao}</p>
-                <a 
+              <div key={index} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-all">
+                <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-100">{material.titulo}</h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">{material.descricao}</p>
+                <a
                   href={`/ref/${material.arquivo}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-black text-white px-4 py-2 hover:bg-gray-800 transition-colors"
+                  className="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   📄 Abrir PDF
                 </a>
@@ -81,18 +86,18 @@ export default function ReferenciasPage() {
         </section>
 
         <section className="mb-12 print-break">
-          <h2 className="subsection-title">📝 Listas de Exercícios</h2>
-          
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">📝 Listas de Exercícios</h2>
+
           <div className="grid gap-4">
             {exercicios.map((exercicio, index) => (
-              <div key={index} className="border-2 border-black p-4 hover:bg-gray-50 transition-colors">
-                <h3 className="font-bold text-lg mb-2">{exercicio.titulo}</h3>
-                <p className="text-gray-700 mb-3">{exercicio.descricao}</p>
-                <a 
+              <div key={index} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-all">
+                <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-100">{exercicio.titulo}</h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">{exercicio.descricao}</p>
+                <a
                   href={`/ref/${exercicio.arquivo}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-black text-white px-4 py-2 hover:bg-gray-800 transition-colors"
+                  className="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   📄 Abrir PDF
                 </a>
@@ -102,21 +107,21 @@ export default function ReferenciasPage() {
         </section>
 
         <section className="print-break">
-          <div className="bg-gray-100 border-2 border-black p-6">
-            <h2 className="font-bold text-lg mb-3">ℹ️ Sobre o Material de Referência</h2>
-            <p className="mb-2">
-              Este material foi fornecido pelo IFSULDEMINAS - Campus Muzambinho como base para o 
+          <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600 p-6 rounded-r-lg">
+            <h2 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100">ℹ️ Sobre o Material de Referência</h2>
+            <p className="mb-2 text-gray-700 dark:text-gray-300">
+              Este material foi fornecido pelo IFSULDEMINAS - Campus Muzambinho como base para o
               estudo de Teoria dos Grafos. Os PDFs originais contêm o conteúdo completo da disciplina.
             </p>
-            <p>
-              Este site web complementa o material original com exercícios resolvidos, 
+            <p className="text-gray-700 dark:text-gray-300">
+              Este site web complementa o material original com exercícios resolvidos,
               visualizações interativas e resumos organizados para facilitar o estudo.
             </p>
           </div>
         </section>
-        
-        <div className="mt-12 pt-6 border-t-2 border-black">
-          <Link href="/" className="hover:underline">
+
+        <div className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700">
+          <Link href="/" className="text-green-600 hover:underline">
             ← Voltar ao início
           </Link>
         </div>
