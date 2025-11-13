@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
+import ProgressTracker from '@/app/components/ProgressTracker'
 
 export default function ExerciciosTodosPage() {
   return (
@@ -10,6 +11,7 @@ export default function ExerciciosTodosPage() {
         <ModernHeader />
 
         <main className="container-modern px-4 py-8">
+          <ProgressTracker pageId="exercicios-todos" title="Exercícios Resolvidos" />
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/" className="text-green-600 hover:underline">

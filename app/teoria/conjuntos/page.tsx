@@ -5,6 +5,7 @@ import ModernHeader from '@/app/components/ModernHeader'
 import Breadcrumb from '@/app/components/Breadcrumb'
 import PageNavigation from '@/app/components/PageNavigation'
 import PrintButton from '@/app/components/PrintButton'
+import ProgressTracker from '@/app/components/ProgressTracker'
 
 export default function ConjuntosPage() {
   return (
@@ -13,6 +14,8 @@ export default function ConjuntosPage() {
         <ModernHeader />
 
         <main className="container-modern px-4 py-8">
+          <ProgressTracker pageId="teoria-conjuntos" title="Fundamentos de Conjuntos" />
+
           <div className="max-w-4xl mx-auto">
             <Breadcrumb
               items={[

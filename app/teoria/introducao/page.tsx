@@ -5,6 +5,7 @@ import ModernHeader from '@/app/components/ModernHeader'
 import GraphSVG from '@/app/components/GraphSVG'
 import PageNavigation from '@/app/components/PageNavigation'
 import PrintButton from '@/app/components/PrintButton'
+import ProgressTracker from '@/app/components/ProgressTracker'
 
 export default function IntroducaoPage() {
   return (
@@ -13,6 +14,8 @@ export default function IntroducaoPage() {
         <ModernHeader />
 
         <main className="container-modern px-4 py-8">
+          <ProgressTracker pageId="teoria-introducao" title="Introdução aos Grafos" />
+
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/" className="text-green-600 hover:underline">

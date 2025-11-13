@@ -4,6 +4,7 @@ import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
 import PageNavigation from '@/app/components/PageNavigation'
 import PrintButton from '@/app/components/PrintButton'
+import ProgressTracker from '@/app/components/ProgressTracker'
 
 export default function FormulasPage() {
   return (
@@ -13,6 +14,7 @@ export default function FormulasPage() {
 
         <main className="container-modern px-4 py-8">
           <div className="max-w-5xl mx-auto">
+          <ProgressTracker pageId="teoria-formulas" title="Fórmulas Essenciais" />
             <nav className="mb-8">
               <Link href="/" className="text-green-600 hover:underline">
                 Início

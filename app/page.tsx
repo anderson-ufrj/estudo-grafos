@@ -3,12 +3,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import ModernHeader from './components/ModernHeader'
+import ProgressBadge from './components/ProgressBadge'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <ModernHeader />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-600 to-emerald-700 text-white py-20 relative overflow-hidden">
@@ -25,7 +26,7 @@ export default function Home() {
               <line x1="200" y1="80" x2="300" y2="150" stroke="white" strokeWidth="1"/>
               <line x1="150" y1="200" x2="250" y2="250" stroke="white" strokeWidth="1"/>
               <line x1="300" y1="150" x2="250" y2="250" stroke="white" strokeWidth="1"/>
-              
+
               {/* Grafo decorativo - Canto inferior direito */}
               <circle cx="600" cy="300" r="4" fill="white"/>
               <circle cx="700" cy="280" r="4" fill="white"/>
@@ -36,7 +37,7 @@ export default function Home() {
               <line x1="700" y1="280" x2="650" y2="200" stroke="white" strokeWidth="1"/>
               <line x1="600" y1="300" x2="550" y2="250" stroke="white" strokeWidth="1"/>
               <line x1="550" y1="250" x2="650" y2="200" stroke="white" strokeWidth="1"/>
-              
+
               {/* Grafo decorativo - Centro superior */}
               <circle cx="400" cy="50" r="4" fill="white"/>
               <circle cx="450" cy="100" r="4" fill="white"/>
@@ -46,7 +47,7 @@ export default function Home() {
               <line x1="400" y1="50" x2="500" y2="60" stroke="white" strokeWidth="1"/>
               <line x1="450" y1="100" x2="420" y2="120" stroke="white" strokeWidth="1"/>
               <line x1="500" y1="60" x2="450" y2="100" stroke="white" strokeWidth="1"/>
-              
+
               {/* Grafo decorativo - Lateral esquerda */}
               <circle cx="50" cy="250" r="4" fill="white"/>
               <circle cx="80" cy="300" r="4" fill="white"/>
@@ -54,7 +55,7 @@ export default function Home() {
               <line x1="50" y1="250" x2="80" y2="300" stroke="white" strokeWidth="1"/>
               <line x1="80" y1="300" x2="120" y2="280" stroke="white" strokeWidth="1"/>
               <line x1="50" y1="250" x2="120" y2="280" stroke="white" strokeWidth="1"/>
-              
+
               {/* Grafo decorativo - Lateral direita */}
               <circle cx="750" cy="150" r="4" fill="white"/>
               <circle cx="720" cy="100" r="4" fill="white"/>
@@ -64,8 +65,8 @@ export default function Home() {
               <line x1="750" y1="150" x2="780" y2="80" stroke="white" strokeWidth="1"/>
             </svg>
           </div>
-          
-          
+
+
           <div className="container-modern px-4 relative z-10">
             <h1 className="text-5xl font-bold mb-4">
               Material de Estudo
@@ -91,7 +92,7 @@ export default function Home() {
         <section className="py-16">
           <div className="container-modern px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">Conteúdo Disponível</h2>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="card">
                 <div className="text-4xl mb-4">📚</div>
@@ -103,7 +104,7 @@ export default function Home() {
                   Acessar →
                 </Link>
               </div>
-              
+
               <div className="card">
                 <div className="text-4xl mb-4">🌐</div>
                 <h3 className="font-bold text-lg mb-2">Introdução aos Grafos</h3>
@@ -114,7 +115,7 @@ export default function Home() {
                   Acessar →
                 </Link>
               </div>
-              
+
               <div className="card">
                 <div className="text-4xl mb-4">🛤️</div>
                 <h3 className="font-bold text-lg mb-2">Caminhos e Ciclos</h3>
@@ -125,7 +126,7 @@ export default function Home() {
                   Acessar →
                 </Link>
               </div>
-              
+
               <div className="card">
                 <div className="text-4xl mb-4">📊</div>
                 <h3 className="font-bold text-lg mb-2">Representação Matricial</h3>
@@ -228,12 +229,12 @@ export default function Home() {
                 <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform">🔢</span>
                 <h3 className="font-semibold">Fórmulas Essenciais</h3>
               </Link>
-              
+
               <Link href="/exercicios/todos" className="card text-center hover:border-green-600 transition-colors group">
                 <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform">📝</span>
                 <h3 className="font-semibold">Todos os Exercícios</h3>
               </Link>
-              
+
               <Link href="/roteiro" className="card text-center hover:border-green-600 transition-colors group">
                 <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform">🗺️</span>
                 <h3 className="font-semibold">Roteiro de Estudo</h3>
@@ -242,7 +243,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      
+
       <footer className="bg-gray-900 text-white py-8 mt-16">
         <div className="container-modern px-4 text-center">
           <p className="mb-2">Material de Estudo - Teoria dos Grafos</p>
@@ -261,6 +262,8 @@ export default function Home() {
           </p>
         </div>
       </footer>
+
+      <ProgressBadge />
     </div>
   )
 }

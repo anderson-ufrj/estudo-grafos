@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from './context/ThemeContext'
+import { ProgressProvider } from './context/ProgressContext'
 
 export const metadata: Metadata = {
   title: 'Estudo de Teoria dos Grafos',
@@ -18,7 +19,9 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <body className="font-sans antialiased bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <ThemeProvider>
-          {children}
+          <ProgressProvider>
+            {children}
+          </ProgressProvider>
         </ThemeProvider>
       </body>
     </html>
