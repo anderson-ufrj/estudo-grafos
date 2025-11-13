@@ -2,6 +2,8 @@
 
 import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
+import PageNavigation from '@/app/components/PageNavigation'
+import PrintButton from '@/app/components/PrintButton'
 
 export default function FormulasPage() {
   return (
@@ -342,6 +344,8 @@ export default function FormulasPage() {
                 </div>
               </section>
 
+              <PageNavigation prev={{ url: '/teoria/matrizes', title: 'Representação Matricial' }} />
+
               {/* Botões de Navegação */}
               <div className="mt-12 flex justify-between">
                 <Link href="/teoria/matrizes" className="btn-secondary">
@@ -355,6 +359,7 @@ export default function FormulasPage() {
           </div>
         </main>
       </div>
+      <PrintButton />
     </>
   )
 }

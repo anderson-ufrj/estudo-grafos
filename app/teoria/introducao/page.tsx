@@ -3,13 +3,15 @@
 import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
 import GraphSVG from '@/app/components/GraphSVG'
+import PageNavigation from '@/app/components/PageNavigation'
+import PrintButton from '@/app/components/PrintButton'
 
 export default function IntroducaoPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-700/50">
         <ModernHeader />
-        
+
         <main className="container-modern px-4 py-8">
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
@@ -27,7 +29,7 @@ export default function IntroducaoPage() {
             <div className="prose prose-lg max-w-none">
               <section className="mb-12">
                 <h2 className="text-2xl font-bold mb-4">1. O que são Grafos?</h2>
-                
+
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm mb-6">
                   <h3 className="text-xl font-semibold mb-3">Definição</h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -74,7 +76,7 @@ export default function IntroducaoPage() {
 
               <section className="mb-12">
                 <h2 className="text-2xl font-bold mb-4">2. Tipos de Grafos</h2>
-                
+
                 <div className="space-y-6">
                   <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                     <h3 className="text-lg font-semibold mb-3 text-green-600">Grafo Não-Direcionado</h3>
@@ -110,7 +112,7 @@ export default function IntroducaoPage() {
 
               <section className="mb-12">
                 <h2 className="text-2xl font-bold mb-4">3. Terminologia Básica</h2>
-                
+
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                   <h3 className="text-lg font-semibold mb-3">Conceitos Fundamentais</h3>
                   <dl className="space-y-4">
@@ -145,7 +147,7 @@ export default function IntroducaoPage() {
 
               <section className="mb-12">
                 <h2 className="text-2xl font-bold mb-4">4. Propriedades Importantes</h2>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                     <h3 className="text-lg font-semibold mb-3">Teorema do Aperto de Mãos</h3>
@@ -276,6 +278,11 @@ export default function IntroducaoPage() {
                 </div>
               </section>
 
+              <PageNavigation
+                prev={{ url: '/teoria/conjuntos', title: 'Fundamentos de Conjuntos' }}
+                next={{ url: '/teoria/caminhos', title: 'Caminhos e Ciclos' }}
+              />
+
               <div className="mt-12 flex justify-between">
                 <Link href="/teoria/conjuntos" className="btn-secondary">
                   ← Anterior: Conjuntos
@@ -288,6 +295,7 @@ export default function IntroducaoPage() {
           </div>
         </main>
       </div>
+      <PrintButton />
     </>
   )
 }

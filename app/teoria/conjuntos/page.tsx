@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
 import Breadcrumb from '@/app/components/Breadcrumb'
+import PageNavigation from '@/app/components/PageNavigation'
+import PrintButton from '@/app/components/PrintButton'
 
 export default function ConjuntosPage() {
   return (
@@ -27,7 +29,7 @@ export default function ConjuntosPage() {
             <div className="prose prose-lg max-w-none">
               <section className="mb-12">
                 <h2 className="text-2xl font-bold mb-4">1. Teoria dos Conjuntos</h2>
-                
+
                 <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
                   <h3 className="text-xl font-semibold mb-3">Definição de Conjunto</h3>
                   <p className="text-gray-700 mb-4">
@@ -89,7 +91,7 @@ export default function ConjuntosPage() {
 
               <section className="mb-12">
                 <h2 className="text-2xl font-bold mb-4">2. Operações com Conjuntos</h2>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-white p-6 rounded-lg shadow-sm">
                     <h3 className="text-lg font-semibold mb-3">União (A ∪ B)</h3>
@@ -135,7 +137,7 @@ export default function ConjuntosPage() {
 
               <section className="mb-12">
                 <h2 className="text-2xl font-bold mb-4">3. Propriedades das Operações</h2>
-                
+
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="text-lg font-semibold mb-3">Propriedades Fundamentais</h3>
                   <div className="space-y-3">
@@ -167,7 +169,7 @@ export default function ConjuntosPage() {
 
               <section className="mb-12">
                 <h2 className="text-2xl font-bold mb-4">4. Produto Cartesiano</h2>
-                
+
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="text-lg font-semibold mb-3">Definição</h3>
                   <p className="text-gray-700 mb-4">
@@ -184,6 +186,8 @@ export default function ConjuntosPage() {
                 </div>
               </section>
 
+              <PageNavigation next={{ url: '/teoria/introducao', title: 'Introdução aos Grafos' }} />
+
               <div className="mt-12 flex justify-between">
                 <Link href="/" className="btn-secondary">
                   ← Voltar ao Início
@@ -196,6 +200,7 @@ export default function ConjuntosPage() {
           </div>
         </main>
       </div>
+      <PrintButton />
     </>
   )
 }

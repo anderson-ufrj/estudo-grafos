@@ -2,6 +2,8 @@
 
 import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
+import PageNavigation from '@/app/components/PageNavigation'
+import PrintButton from '@/app/components/PrintButton'
 
 export default function MatrizesPage() {
   return (
@@ -332,6 +334,11 @@ export default function MatrizesPage() {
                 </div>
               </section>
 
+              <PageNavigation
+                prev={{ url: '/teoria/caminhos', title: 'Caminhos e Ciclos' }}
+                next={{ url: '/teoria/formulas', title: 'Fórmulas Essenciais' }}
+              />
+
               <div className="mt-12 flex justify-between">
                 <Link href="/teoria/caminhos" className="btn-secondary">
                   ← Anterior: Caminhos e Ciclos
@@ -344,6 +351,7 @@ export default function MatrizesPage() {
           </div>
         </main>
       </div>
+      <PrintButton />
     </>
   )
 }

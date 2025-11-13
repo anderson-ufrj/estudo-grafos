@@ -2,6 +2,8 @@
 
 import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
+import PageNavigation from '@/app/components/PageNavigation'
+import PrintButton from '@/app/components/PrintButton'
 
 export default function CaminhosPage() {
   return (
@@ -253,6 +255,11 @@ export default function CaminhosPage() {
                 </div>
               </section>
 
+              <PageNavigation
+                prev={{ url: '/teoria/introducao', title: 'Introdução aos Grafos' }}
+                next={{ url: '/teoria/matrizes', title: 'Representação Matricial' }}
+              />
+
               <div className="mt-12 flex justify-between">
                 <Link href="/teoria/introducao" className="btn-secondary">
                   ← Anterior: Introdução aos Grafos
@@ -265,6 +272,7 @@ export default function CaminhosPage() {
           </div>
         </main>
       </div>
+      <PrintButton />
     </>
   )
 }
