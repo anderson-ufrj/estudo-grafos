@@ -224,7 +224,7 @@ export default function Home() {
         <section className="py-16">
           <div className="container-modern px-4">
             <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">Acesso Rápido</h2>
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
               <Link href="/teoria/formulas" className="card text-center hover:border-green-600 transition-colors group">
                 <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform">🔢</span>
                 <h3 className="font-semibold">Fórmulas Essenciais</h3>
@@ -233,6 +233,11 @@ export default function Home() {
               <Link href="/exercicios/todos" className="card text-center hover:border-green-600 transition-colors group">
                 <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform">📝</span>
                 <h3 className="font-semibold">Todos os Exercícios</h3>
+              </Link>
+
+              <Link href="/quiz" className="card text-center hover:border-green-600 transition-colors group">
+                <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform">🎯</span>
+                <h3 className="font-semibold">Quiz Interativo</h3>
               </Link>
 
               <Link href="/roteiro" className="card text-center hover:border-green-600 transition-colors group">
