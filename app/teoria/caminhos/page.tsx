@@ -5,6 +5,8 @@ import ModernHeader from '@/app/components/ModernHeader'
 import PageNavigation from '@/app/components/PageNavigation'
 import PrintButton from '@/app/components/PrintButton'
 import ProgressTracker from '@/app/components/ProgressTracker'
+import FocusMode from '@/app/components/FocusMode'
+import ShareButtons from '@/app/components/ShareButtons'
 
 export default function CaminhosPage() {
   return (
@@ -276,6 +278,8 @@ export default function CaminhosPage() {
         </main>
       </div>
       <PrintButton />
+      <FocusMode />
+      <ShareButtons title="Caminhos e Ciclos" />
     </>
   )
 }

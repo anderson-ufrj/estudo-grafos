@@ -6,6 +6,8 @@ import Breadcrumb from '@/app/components/Breadcrumb'
 import PageNavigation from '@/app/components/PageNavigation'
 import PrintButton from '@/app/components/PrintButton'
 import ProgressTracker from '@/app/components/ProgressTracker'
+import FocusMode from '@/app/components/FocusMode'
+import ShareButtons from '@/app/components/ShareButtons'
 
 export default function ConjuntosPage() {
   return (
@@ -204,6 +206,8 @@ export default function ConjuntosPage() {
         </main>
       </div>
       <PrintButton />
+      <FocusMode />
+      <ShareButtons title="Fundamentos de Conjuntos" />
     </>
   )
 }

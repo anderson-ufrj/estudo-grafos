@@ -3,6 +3,9 @@
 import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
 import ProgressTracker from '@/app/components/ProgressTracker'
+import PrintButton from '@/app/components/PrintButton'
+import FocusMode from '@/app/components/FocusMode'
+import ShareButtons from '@/app/components/ShareButtons'
 
 export default function ExerciciosTodosPage() {
   return (
@@ -451,6 +454,9 @@ export default function ExerciciosTodosPage() {
           </div>
         </main>
       </div>
+      <PrintButton />
+      <FocusMode />
+      <ShareButtons title="Exercícios Resolvidos" />
     </>
   )
 }
