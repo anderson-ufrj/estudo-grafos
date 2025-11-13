@@ -22,7 +22,7 @@ export default function PageNavigation({ prev, next }: NavigationProps) {
           </div>
         </Link>
       ) : (
-        <div /> {/* Spacer */}
+        <div />
       )}
 
       {next ? (
@@ -39,7 +39,7 @@ export default function PageNavigation({ prev, next }: NavigationProps) {
           </svg>
         </Link>
       ) : (
-        <div /> {/* Spacer */}
+        <div />
       )}
     </div>
   )

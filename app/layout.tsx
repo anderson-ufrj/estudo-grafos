@@ -24,9 +24,9 @@ export default function RootLayout({
         <ThemeProvider>
           <ProgressProvider>
             {children}
-            <div vw="true" className="enabled">
-              <div vw-access-button="true" className="active"></div>
-              <div vw-plugin-wrapper="true">
+            <div data-vw="true" className="enabled">
+              <div data-vw-access-button="true" className="active"></div>
+              <div data-vw-plugin-wrapper="true">
                 <div className="vw-plugin-top-wrapper"></div>
               </div>
             </div>
