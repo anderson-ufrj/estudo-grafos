@@ -1,14 +1,46 @@
 # 📚 Estudo de Teoria dos Grafos
 
-Material didático interativo para o estudo de Teoria dos Grafos, desenvolvido para auxiliar estudantes do IFSULDEMINAS - Campus Muzambinho na preparação para provas e compreensão dos conceitos fundamentais.
+Plataforma educacional completa e interativa para estudo de Teoria dos Grafos, desenvolvida para estudantes do **IFSULDEMINAS - Campus Muzambinho** com foco em aprendizado prático e acessibilidade.
 
 ## 🎯 Objetivo
 
-Este projeto foi criado para fornecer um material de estudo completo e interativo sobre Teoria dos Grafos, incluindo:
-- Resumos teóricos estruturados
-- Fórmulas essenciais
-- Exercícios resolvidos passo a passo
-- Interface responsiva e otimizada para impressão
+Este projeto oferece uma experiência de aprendizado moderna e completa sobre Teoria dos Grafos, incluindo:
+- 📖 **Teoria completa** com 5 módulos estruturados
+- ✏️ **10 exercícios resolvidos** passo a passo (conjuntos + grafos)
+- 🎮 **Quiz interativo** com 20 questões e 3 níveis de dificuldade
+- 🔍 **Busca inteligente** com 48+ itens indexados e filtros
+- 📱 **Design responsivo** otimizado para mobile, tablet e desktop
+- 🌓 **Dark mode** com suporte completo
+- ♿ **Acessibilidade** com integração VLibras (Libras)
+- 🖨️ **Otimizado para impressão** em formato PDF
+
+## ✨ Novidades Recentes (2025)
+
+### Navegação e UX
+- ✅ Menu hamburger responsivo para mobile
+- ✅ FloatingActionMenu (FAB) consolidado
+- ✅ Breadcrumb navigation em todas páginas
+- ✅ Página 404 personalizada
+- ✅ Atalho de teclado Cmd+K / Ctrl+K para busca rápida
+
+### Busca e Filtros
+- ✅ 48 itens indexados (teoria, exercícios, algoritmos, recursos)
+- ✅ Filtros por categoria (Todos, Teoria, Exercícios, Recursos)
+- ✅ Contador de resultados em tempo real
+- ✅ Busca em título e conteúdo
+
+### Conteúdo Expandido
+- ✅ **20 questões no quiz** (antes: 8) com níveis de dificuldade
+- ✅ **Exercícios de Conjuntos** - 5 exercícios resolvidos
+- ✅ **Exercícios de Grafos** - 5 exercícios avançados (Kruskal, Euler, etc)
+- ✅ Dados do quiz externalizados para fácil manutenção
+
+### SEO e Performance
+- ✅ Meta descriptions em todas páginas
+- ✅ Open Graph tags para redes sociais
+- ✅ 16+ keywords otimizadas
+- ✅ Build otimizado sem erros TypeScript
+- ✅ 13 rotas estáticas geradas
 
 ## 🚀 Tecnologias Utilizadas
 
