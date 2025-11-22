@@ -20,7 +20,9 @@ const searchDatabase: SearchResult[] = [
   { title: 'Fórmulas Essenciais', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Todas fórmulas importantes, teoremas, complexidades, algoritmos' },
 
   // Exercícios
-  { title: 'Exercícios Resolvidos', category: 'Exercícios', url: '/exercicios/todos', excerpt: 'Produto cartesiano, funções, grafos, matrizes, caminhos resolvidos' },
+  { title: 'Exercícios Resolvidos - Todos', category: 'Exercícios', url: '/exercicios/todos', excerpt: 'Produto cartesiano, funções, grafos, matrizes, caminhos resolvidos' },
+  { title: 'Exercícios de Conjuntos', category: 'Exercícios', url: '/exercicios/conjuntos', excerpt: 'União, interseção, diferença, produto cartesiano, conjunto potência, aplicações' },
+  { title: 'Exercícios de Grafos', category: 'Exercícios', url: '/exercicios/grafos', excerpt: 'Classificação, graus, matriz adjacência, caminhos Eulerianos, Kruskal, árvore geradora' },
 
   // Algoritmos - busca por nome
   { title: 'Algoritmo de Prim', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Árvore geradora mínima, complexidade O(V+E log V)' },
@@ -40,6 +42,11 @@ const searchDatabase: SearchResult[] = [
   { title: 'Fórmula de Euler', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Grafos planares, V - E + F = 2' },
   { title: 'Grau de Vértice', category: 'Teoria', url: '/teoria/introducao', excerpt: 'Número de arestas incidentes, deg(v)' },
   { title: 'Grafo Planar', category: 'Teoria', url: '/teoria/formulas', excerpt: 'Pode ser desenhado sem cruzamentos, |E| ≤ 3|V| - 6' },
+
+  // Recursos
+  { title: 'Quiz Interativo', category: 'Recursos', url: '/quiz', excerpt: '20 questões sobre grafos, conjuntos, algoritmos - com 3 níveis de dificuldade' },
+  { title: 'Roteiro de Estudo', category: 'Recursos', url: '/roteiro', excerpt: 'Plano de estudos semanal completo para aprender teoria dos grafos' },
+  { title: 'Material de Referência', category: 'Recursos', url: '/referencias', excerpt: 'PDFs, livros e materiais complementares' },
 ]
 
 export default function SearchBar() {
