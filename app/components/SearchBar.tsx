@@ -53,6 +53,7 @@ export default function SearchBar() {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const [isOpen, setIsOpen] = useState(false)
+  const [selectedCategory, setSelectedCategory] = useState<string>('Todos')
 
   // Atalho de teclado Cmd+K / Ctrl+K
   useEffect(() => {
@@ -75,7 +76,7 @@ export default function SearchBar() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
-  const handleSearch = (searchQuery: string) => {
+  const handleSearch = (searchQuery: string, category: string = selectedCategory) => {
     setQuery(searchQuery)
 
     if (searchQuery.trim().length < 2) {
@@ -85,13 +86,25 @@ export default function SearchBar() {
     }
 
     const lowerQuery = searchQuery.toLowerCase()
-    const filtered = searchDatabase.filter(item =>
+    let filtered = searchDatabase.filter(item =>
       item.title.toLowerCase().includes(lowerQuery) ||
       item.excerpt.toLowerCase().includes(lowerQuery)
     )
 
+    // Aplicar filtro de categoria
+    if (category !== 'Todos') {
+      filtered = filtered.filter(item => item.category === category)
+    }
+
     setResults(filtered)
     setIsOpen(filtered.length > 0)
+  }
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category)
+    if (query.trim().length >= 2) {
+      handleSearch(query, category)
+    }
   }
 
   return (
@@ -116,9 +129,35 @@ export default function SearchBar() {
         </svg>
       </div>
 
+      {/* Filtros de Categoria */}
+      {isOpen && (
+        <div className="flex gap-2 mt-2 flex-wrap">
+          {['Todos', 'Teoria', 'Exercícios', 'Recursos'].map((category) => (
+            <button
+              key={category}
+              onClick={() => handleCategoryChange(category)}
+              className={`px-3 py-1 text-xs rounded-full transition-colors ${
+                selectedCategory === category
+                  ? 'bg-green-600 text-white dark:bg-green-500'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      )}
+
       {/* Search Results Dropdown */}
       {isOpen && results.length > 0 && (
         <div className="absolute z-50 w-full mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl max-h-96 overflow-y-auto">
+          {/* Contador de Resultados */}
+          <div className="px-4 py-2 bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+            <p className="text-xs text-gray-600 dark:text-gray-400">
+              <strong>{results.length}</strong> {results.length === 1 ? 'resultado encontrado' : 'resultados encontrados'}
+            </p>
+          </div>
+
           {results.map((result, index) => (
             <Link
               key={index}
