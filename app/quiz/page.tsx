@@ -3,87 +3,9 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
+import { quizQuestions, type Question } from '@/app/lib/data/quiz-questions'
 
-interface Question {
-  id: number
-  question: string
-  options: string[]
-  correct: number
-  explanation: string
-  topic: string
-}
-
-const quizData: Question[] = [
-  {
-    id: 1,
-    question: 'Quantas arestas tem um grafo completo K₅?',
-    options: ['8', '10', '12', '20'],
-    correct: 1,
-    explanation: 'Um grafo completo Kₙ tem n(n-1)/2 arestas. Para K₅: 5(5-1)/2 = 5(4)/2 = 10 arestas.',
-    topic: 'Grafos Básicos'
-  },
-  {
-    id: 2,
-    question: 'O que diz o Teorema do Aperto de Mãos?',
-    options: [
-      'A soma dos graus é igual ao número de arestas',
-      'A soma dos graus é o dobro do número de arestas',
-      'O número de vértices de grau ímpar é sempre ímpar',
-      'Todo grafo tem pelo menos um vértice de grau par'
-    ],
-    correct: 1,
-    explanation: 'O Teorema do Aperto de Mãos afirma que ∑deg(v) = 2|E|. Cada aresta contribui com 2 no somatório dos graus.',
-    topic: 'Teoremas'
-  },
-  {
-    id: 3,
-    question: 'Para um grafo ter um ciclo Euleriano, todos os vértices devem ter:',
-    options: ['Grau par', 'Grau ímpar', 'Grau maior que 2', 'Grau igual'],
-    correct: 0,
-    explanation: 'Um grafo tem ciclo Euleriano se e somente se todos os vértices têm grau par e o grafo é conexo.',
-    topic: 'Caminhos Eulerianos'
-  },
-  {
-    id: 4,
-    question: 'Quantas arestas tem uma árvore com 10 vértices?',
-    options: ['8', '9', '10', '11'],
-    correct: 1,
-    explanation: 'Uma árvore sempre tem |E| = |V| - 1 arestas. Com 10 vértices: 10 - 1 = 9 arestas.',
-    topic: 'Árvores'
-  },
-  {
-    id: 5,
-    question: 'Em uma matriz de adjacência de um grafo não-direcionado, a matriz é:',
-    options: ['Simétrica', 'Diagonal', 'Triangular', 'Identidade'],
-    correct: 0,
-    explanation: 'A matriz de adjacência de um grafo não-direcionado é simétrica porque A[i][j] = A[j][i] (se há aresta de i para j, há de j para i).',
-    topic: 'Matrizes'
-  },
-  {
-    id: 6,
-    question: 'Qual é a complexidade do algoritmo de Dijkstra com lista de adjacência?',
-    options: ['O(V²)', 'O(E log E)', 'O(V + E)', 'O((V + E) log V)'],
-    correct: 3,
-    explanation: 'Com heap de Fibonacci ou fila de prioridade, Dijkstra tem complexidade O((V + E) log V) usando lista de adjacência.',
-    topic: 'Algoritmos'
-  },
-  {
-    id: 7,
-    question: 'Quantos elementos tem o conjunto potência de um conjunto com 4 elementos?',
-    options: ['8', '12', '16', '24'],
-    correct: 2,
-    explanation: 'O conjunto potência P(A) tem |P(A)| = 2^|A| elementos. Para |A| = 4: 2⁴ = 16 elementos.',
-    topic: 'Conjuntos'
-  },
-  {
-    id: 8,
-    question: 'A Fórmula de Euler para grafos planares é:',
-    options: ['V + E - F = 2', 'V - E + F = 2', 'V + E + F = 2', 'V - E - F = 2'],
-    correct: 1,
-    explanation: 'A Fórmula de Euler para grafos planares conexos é V - E + F = 2, onde V são vértices, E arestas e F faces.',
-    topic: 'Grafos Planares'
-  }
-]
+const quizData = quizQuestions
 
 export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
