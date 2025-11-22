@@ -1,6 +1,6 @@
 import ModernHeader from '@/app/components/ModernHeader'
 import ProgressTracker from '@/app/components/ProgressTracker'
-import PageNavigation from '@/app/components/PageNavigation'
+import Breadcrumb from '@/app/components/Breadcrumb'
 import FloatingActionMenu from '@/app/components/FloatingActionMenu'
 import { Metadata } from 'next'
 
@@ -16,11 +16,11 @@ export default function ExerciciosGrafos() {
       <ModernHeader />
 
       <main className="container-modern px-4 py-8">
-        <PageNavigation
+        <Breadcrumb
           items={[
             { label: 'Início', href: '/' },
             { label: 'Exercícios', href: '/exercicios/todos' },
-            { label: 'Grafos', href: '/exercicios/grafos' }
+            { label: 'Grafos' }
           ]}
         />
 

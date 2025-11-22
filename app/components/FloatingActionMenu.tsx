@@ -10,6 +10,8 @@ interface FloatingActionMenuProps {
   pageTitle?: string
 }
 
+const defaultTitle = 'Teoria dos Grafos - IFSULDEMINAS'
+
 export default function FloatingActionMenu({ pageTitle }: FloatingActionMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -34,7 +36,7 @@ export default function FloatingActionMenu({ pageTitle }: FloatingActionMenuProp
             <span className="bg-gray-900 dark:bg-gray-700 text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
               Compartilhar
             </span>
-            <ShareButtons title={pageTitle} />
+            <ShareButtons title={pageTitle || defaultTitle} />
           </div>
 
           {/* Focus Mode */}
