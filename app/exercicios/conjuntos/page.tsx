@@ -2,6 +2,13 @@ import ModernHeader from '@/app/components/ModernHeader'
 import ProgressTracker from '@/app/components/ProgressTracker'
 import PageNavigation from '@/app/components/PageNavigation'
 import FloatingActionMenu from '@/app/components/FloatingActionMenu'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Exercícios de Conjuntos',
+  description: '5 exercícios resolvidos sobre teoria de conjuntos: operações básicas, produto cartesiano, conjunto potência, propriedades e aplicações em grafos.',
+  keywords: ['exercícios de conjuntos', 'teoria de conjuntos', 'produto cartesiano', 'conjunto potência', 'operações de conjuntos']
+}
 
 export default function ExerciciosConjuntos() {
   return (

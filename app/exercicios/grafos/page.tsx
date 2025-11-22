@@ -2,6 +2,13 @@ import ModernHeader from '@/app/components/ModernHeader'
 import ProgressTracker from '@/app/components/ProgressTracker'
 import PageNavigation from '@/app/components/PageNavigation'
 import FloatingActionMenu from '@/app/components/FloatingActionMenu'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Exercícios de Grafos',
+  description: '5 exercícios avançados resolvidos sobre teoria dos grafos: classificação, graus, matriz de adjacência, caminhos Eulerianos e algoritmo de Kruskal.',
+  keywords: ['exercícios de grafos', 'teoria dos grafos', 'matriz de adjacência', 'caminho euleriano', 'kruskal', 'árvore geradora mínima', 'grau de vértices']
+}
 
 export default function ExerciciosGrafos() {
   return (
