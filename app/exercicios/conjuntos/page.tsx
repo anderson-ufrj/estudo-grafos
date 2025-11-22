@@ -1,10 +1,7 @@
 import ModernHeader from '@/app/components/ModernHeader'
-import PrintButton from '@/app/components/PrintButton'
-import ShareButtons from '@/app/components/ShareButtons'
-import FocusMode from '@/app/components/FocusMode'
-import ProgressBadge from '@/app/components/ProgressBadge'
 import ProgressTracker from '@/app/components/ProgressTracker'
 import PageNavigation from '@/app/components/PageNavigation'
+import FloatingActionMenu from '@/app/components/FloatingActionMenu'
 
 export default function ExerciciosConjuntos() {
   return (
@@ -297,10 +294,7 @@ export default function ExerciciosConjuntos() {
         </div>
       </main>
 
-      <PrintButton />
-      <ShareButtons title="Exercícios de Conjuntos - Teoria dos Grafos" />
-      <FocusMode />
-      <ProgressBadge />
+      <FloatingActionMenu pageTitle="Exercícios de Conjuntos - Teoria dos Grafos" />
     </div>
   )
 }

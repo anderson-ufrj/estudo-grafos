@@ -4,10 +4,8 @@ import Link from 'next/link'
 import ModernHeader from '@/app/components/ModernHeader'
 import Breadcrumb from '@/app/components/Breadcrumb'
 import PageNavigation from '@/app/components/PageNavigation'
-import PrintButton from '@/app/components/PrintButton'
 import ProgressTracker from '@/app/components/ProgressTracker'
-import FocusMode from '@/app/components/FocusMode'
-import ShareButtons from '@/app/components/ShareButtons'
+import FloatingActionMenu from '@/app/components/FloatingActionMenu'
 
 export default function ConjuntosPage() {
   return (
@@ -205,9 +203,7 @@ export default function ConjuntosPage() {
           </div>
         </main>
       </div>
-      <PrintButton />
-      <FocusMode />
-      <ShareButtons title="Fundamentos de Conjuntos" />
+      <FloatingActionMenu pageTitle="Fundamentos de Conjuntos - Teoria dos Grafos" />
     </>
   )
 }
